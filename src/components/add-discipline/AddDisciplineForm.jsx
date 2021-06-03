@@ -29,7 +29,7 @@ export const AddDisciplineForm = () => {
               <TextField
                 fullWidth
                 name="name"
-                label="Имя"
+                label="Название"
                 value={values.name}
                 onChange={handleChange}
                 error={touched.name && Boolean(errors.name)}
@@ -38,7 +38,7 @@ export const AddDisciplineForm = () => {
               <TextField
                 fullWidth
                 name="index"
-                label="Фамилия"
+                label="Индекс дисциплины"
                 value={values.index}
                 onChange={handleChange}
                 error={touched.index && Boolean(errors.index)}
@@ -48,7 +48,7 @@ export const AddDisciplineForm = () => {
                 fullWidth
                 name="watch"
                 label="Количество часов"
-                value={values.patronymic}
+                value={values.watch}
                 onChange={handleChange}
                 error={touched.watch && Boolean(errors.watch)}
                 helperText={touched.watch && errors.watch}

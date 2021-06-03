@@ -10,7 +10,7 @@ export const Header = () => {
           <Typography className="header-title" variant="h6">
             Учет успеваемости
           </Typography>
-          <Grid justify="space-between" container xs={4}>
+          <Grid justify="space-between" container xs={5}>
             <NavLink className="nav-link" to="/" exact>
               <Button className="nav-item">Преподаватели</Button>
             </NavLink>
@@ -29,6 +29,14 @@ export const Header = () => {
               exact
             >
               <Button className="nav-item">Группы</Button>
+            </NavLink>
+            <NavLink
+              activeClass="active"
+              className="nav-link"
+              to="/disc-list"
+              exact
+            >
+              <Button className="nav-item">Дисциплины</Button>
             </NavLink>
           </Grid>
         </Grid>

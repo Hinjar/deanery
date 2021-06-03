@@ -13,6 +13,7 @@ import { AddTeacherForm } from "../components/add-teacher/AddTeacherForm";
 import { AddDisciplineForm } from "../components/add-discipline/AddDisciplineForm";
 import { AddGroupForm } from "../components/add-group/AddGroupForm";
 import { AddSpecializationForm } from "../components/add-specialization/AddSpecializationForm";
+import { DistInfo } from "../pages/DistInfo";
 
 export const Routers = () => {
   return (
@@ -52,7 +53,18 @@ export const Routers = () => {
                 exact
                 path="/group-list"
               />
+              <Route
+                component={ItemsList(
+                  "Список дисциплин",
+                  Array(8).fill("Биология"),
+                  "/disc-info",
+                  "/disc-add"
+                )}
+                exact
+                path="/disc-list"
+              />
               <Route component={TeacherInfo} exact path="/teacher-info" />
+              <Route component={DistInfo} exact path="/disc-info" />
               <Route
                 component={SpecializationInfo}
                 exact
@@ -65,6 +77,7 @@ export const Routers = () => {
                 exact
                 path="/add-discipline"
               />
+              <Route component={AddDisciplineForm} exact path="/disc-add" />
               <Route
                 component={AddSpecializationForm}
                 exact
